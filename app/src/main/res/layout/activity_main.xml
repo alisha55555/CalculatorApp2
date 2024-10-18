@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Поле для вывода результата -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:textSize="24sp"
+        android:gravity="end"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Кнопка Clear -->
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="C"
+        app:layout_constraintEnd_toStartOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- Кнопка Back -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="←"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toEndOf="@id/btn_clear"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка Sign -->
+    <Button
+        android:id="@+id/btn_sign"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+/-"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintEnd_toStartOf="@id/btn_divide"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка деления -->
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="/"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toEndOf="@id/btn_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 7 -->
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="7"
+        app:layout_constraintTop_toBottomOf="@id/btn_clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_8"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 8 -->
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="8"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_7"
+        app:layout_constraintEnd_toStartOf="@id/btn_9"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 9 -->
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign"
+        app:layout_constraintStart_toEndOf="@id/btn_8"
+        app:layout_constraintEnd_toStartOf="@id/btn_multiply"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка умножения -->
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:layout_constraintTop_toBottomOf="@id/btn_divide"
+        app:layout_constraintStart_toEndOf="@id/btn_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 4 -->
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@id/btn_7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_5"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 5 -->
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@id/btn_8"
+        app:layout_constraintStart_toEndOf="@id/btn_4"
+        app:layout_constraintEnd_toStartOf="@id/btn_6"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 6 -->
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6"
+        app:layout_constraintTop_toBottomOf="@id/btn_9"
+        app:layout_constraintStart_toEndOf="@id/btn_5"
+        app:layout_constraintEnd_toStartOf="@id/btn_subtract"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка вычитания -->
+    <Button
+        android:id="@+id/btn_subtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintTop_toBottomOf="@id/btn_multiply"
+        app:layout_constraintStart_toEndOf="@id/btn_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 1 -->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_2"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 2 -->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintTop_toBottomOf="@id/btn_5"
+        app:layout_constraintStart_toEndOf="@id/btn_1"
+        app:layout_constraintEnd_toStartOf="@id/btn_3"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 3 -->
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@id/btn_6"
+        app:layout_constraintStart_toEndOf="@id/btn_2"
+        app:layout_constraintEnd_toStartOf="@id/btn_add"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка сложения -->
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/btn_subtract"
+        app:layout_constraintStart_toEndOf="@id/btn_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка 0 -->
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/btn_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_sqrt"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка квадратного корня -->
+    <Button
+        android:id="@+id/btn_sqrt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="√"
+        app:layout_constraintTop_toBottomOf="@id/btn_2"
+        app:layout_constraintStart_toEndOf="@id/btn_0"
+        app:layout_constraintEnd_toStartOf="@id/btn_equals"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+    <!-- Кнопка равно -->
+    <Button
+        android:id="@+id/btn_equals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintTop_toBottomOf="@id/btn_3"
+        app:layout_constraintStart_toEndOf="@id/btn_sqrt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
